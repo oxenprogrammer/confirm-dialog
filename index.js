@@ -1,7 +1,7 @@
 import ConfirmDialog from "./confirmDialog.js";
 
 // Here you can pass to the parent any div content
-new ConfirmDialog("Coming from main");
+new ConfirmDialog();
 
 
 const { body } = document;
@@ -15,12 +15,6 @@ function toggleModal() {
   const question  = document.querySelector('.para');
   if(question) {
     question.innerHTML = "";
-  }
-}
-
-function windowOnClick(event) {
-  if (event.target === modal) {
-      toggleModal();
   }
 }
 
@@ -39,4 +33,4 @@ yesButton.addEventListener("click", () => {
   yes.textContent = "You just Clicked Yes";
   body.appendChild(yes);
 })
-window.addEventListener("click", windowOnClick);
+
